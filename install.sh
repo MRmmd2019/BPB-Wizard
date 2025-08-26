@@ -17,7 +17,7 @@ esac
 
 BINARY="BPB-Wizard"
 ARCHIVE="${BINARY}-${OS}-${ARCH}.tar.gz"
-LATEST_VERSION=$(curl -fsSL https://raw.githubusercontent.com/bia-pain-bache/BPB-Wizard/main/VERSION)
+LATEST_VERSION=$(curl -fsSL https://raw.githubusercontent.com/MRmmd2019/BPB-Wizard/main/VERSION)
 
 if [ -x "./${BINARY}" ]; then
     INSTALLED_VERSION=$("./${BINARY}" --version)
@@ -35,7 +35,7 @@ else
 fi
 
 echo "Downloading ${ARCHIVE}..."
-curl -L -# -o "${ARCHIVE}" "https://github.com/bia-pain-bache/BPB-Wizard/releases/latest/download/${ARCHIVE}" && \
+curl -L -# -o "${ARCHIVE}" "https://github.com/MRmmd2019/BPB-Wizard/releases/latest/download/${ARCHIVE}" && \
 tar xzf "${ARCHIVE}" && \
 chmod +x "./${BINARY}" && \
 exec ./"${BINARY}"
